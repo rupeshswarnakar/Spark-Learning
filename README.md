@@ -26,8 +26,8 @@ However, in Spark (data processing platform) we can simply read files from data 
 ## Resilient Distributed Dataset (RDD)?
 ```
 For instance,
-  If we have 1 GB file to store, we can simple have 8 blocks of data (assuming data block size = 128 MB) and have them stored across multiple machines.
-  Now, we can have 8 partitions each containing records or objects in a distributed data structure which we can as Resilient Distributed Dataset (RDD).
+If we have 1 GB file to store, we can simple have 8 blocks of data (assuming data block size = 128 MB) and have them stored across multiple machines.
+Now, we can have 8 partitions each containing records or objects in a distributed data structure which we can as Resilient Distributed Dataset (RDD).
 
 RDD are fault tolerant, because during processing, if we lose some partitions, then we can quickly go a step back and retrieve the partitions. It is possible because
 RDD are immutable so every time we are not modifying them but creating a different version of their original structure. This helps retrieve partitions as needed.
