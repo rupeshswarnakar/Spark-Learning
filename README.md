@@ -53,9 +53,16 @@ b. Action
 
 Transformation is basically filter, join, union etc. logic for transforming the data.
 Action is a command to execute the trnaformation logic.
+```
 
+## Eager vs Lazy Evaluation?
+```
 In Hive, when we execute sql query it run right away. This right-away execution is called Eager evaluation.
 In Spark, when we write transformation logic, it won't execute until we call action on it. This delayed execution is called Lazy evaluation.
 
 The benefit of lazy evaluation is that, Spark get time to create execution plan to optimally run the logic that saves time and memory.
+
+For instance,
+If we have a sparksql query that says first filter with id<10, then second line query is where department = 'HR' in partitioned table.
+Then, after calling action, Spark will create a execution plan where it will run department = 'HR' before id<10 to optimally run the query.  
 ```
