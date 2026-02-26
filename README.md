@@ -39,3 +39,23 @@ RDD are immutable so every time we are not modifying them but creating a differe
 - Load: RDD write, save etc. to a output source. This output source can be different than extraction source.
 ```
 
+## RDD vs Dataframe?
+```
+RDD is immutable distributed data structure with no schema. Schema means without column names, and their data types information.
+While, Dataframe is RDD + schema. It is also immutable. This immutable nature preserve the fault tolerant feature of RDD, Dataframe.
+```
+
+## Functions in Spark?
+```
+Two main functions:
+a. Transformation
+b. Action
+
+Transformation is basically filter, join, union etc. logic for transforming the data.
+Action is a command to execute the trnaformation logic.
+
+In Hive, when we execute sql query it run right away. This right-away execution is called Eager evaluation.
+In Spark, when we write transformation logic, it won't execute until we call action on it. This delayed execution is called Lazy evaluation.
+
+The benefit of lazy evaluation is that, Spark get time to create execution plan to optimally run the logic that saves time and memory.
+```
