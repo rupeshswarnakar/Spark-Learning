@@ -98,7 +98,8 @@ Q3. How to control the parallelism in spark?
 ○	Since it performs shuffling of data across machines, it is slower.
 ○	It is mainly used to handle uneven data
 ```
-Q4. Please explain followings
+Q4. Please explain followings:
+```
 ○	Spark Driver
     It is the main machine that distributes work to all executors. It is the program that runs the main program. It creates the execution plan and splits jobs into stages and tasks.  
 ○	Execution Mode
@@ -111,4 +112,5 @@ Q4. Please explain followings
     It is basically the group of tasks that can run together. If the type of transformation does not change from narrow to wide for instance, then tasks can be grouped into a stage. 
 ○	Worker Node
     This is the actual machine that executes the task assigned by the driver node. It contains executors, CPU and Memory.
+```
 
