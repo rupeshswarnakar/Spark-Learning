@@ -86,7 +86,8 @@ Q2. What is the difference between RDD and DataFrame?
 ○	Dataframe is high level including schema information.
 ○	Both are immutable hence; different versions are created during processing that also preserves the original data (fault-tolerant).
 ```
-Q3. How to control the parallelism in spark.
+Q3. How to control the parallelism in spark?
+```
 ○	Parallelism is basically how many tasks are processed parallelly. And this is controlled by how many partitions there are. 
 ○	To reduce partitions, we perform coalesce function to reduce parallel tasks.
 ○	Coalesce reduce partitions in each machine so total partitions may still be high number.
@@ -96,7 +97,7 @@ Q3. How to control the parallelism in spark.
 ○	Repartition is maintained at totality, so the total partition is not different.
 ○	Since it performs shuffling of data across machines, it is slower.
 ○	It is mainly used to handle uneven data
-
+```
 Q4. Please explain followings
 ○	Spark Driver
     It is the main machine that distributes work to all executors. It is the program that runs the main program. It creates the execution plan and splits jobs into stages and tasks.  
