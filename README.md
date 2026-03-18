@@ -71,7 +71,7 @@ Then, after calling action, Spark will create a execution plan where it will run
 
 
 
-## Q1. What is the difference between map, flatmap?
+## The difference between map, flatmap?
 ```
 ○	These are transformation functions in spark that help us get one output or multiple output per an input. 
 ○	Map processes each element individually and obtain one output per an input without flattening. 
@@ -79,14 +79,14 @@ Then, after calling action, Spark will create a execution plan where it will run
 ○	Flatmap expands each element individually and obtain more output than the input. It also flattens nested results into one level. 
     For e.g., [“ab”, “cd”] = flatMap(split)  [“a”,”b”,“c”,”d”]
 ```
-## Q2. What is the difference between RDD and DataFrame?
+## The difference between RDD and DataFrame?
 ```
 ○	RDD and DataFrame are distributed collection of data in Spark.
 ○	RDD is low-level without schema (rows and columns)
 ○	Dataframe is high level including schema information.
 ○	Both are immutable hence; different versions are created during processing that also preserves the original data (fault-tolerant).
 ```
-## Q3. How to control the parallelism in spark?
+## How to control the parallelism in spark?
 ```
 ○	Parallelism is basically how many tasks are processed parallelly. And this is controlled by how many partitions there are. 
 ○	To reduce partitions, we perform coalesce function to reduce parallel tasks.
@@ -98,7 +98,7 @@ Then, after calling action, Spark will create a execution plan where it will run
 ○	Since it performs shuffling of data across machines, it is slower.
 ○	It is mainly used to handle uneven data
 ```
-## Q4. Please explain followings:
+## Explain followings:
 ```
 ○	Spark Driver
     It is the main machine that distributes work to all executors. It is the program that runs the main program. It creates the execution plan and splits jobs into stages and tasks.  
